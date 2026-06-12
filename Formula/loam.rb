@@ -10,21 +10,21 @@
 class Loam < Formula
   desc "Codebase intelligence & anti-AI-slop for Dart & Flutter"
   homepage "https://getloam.dev"
-  version "0.1.7"
+  version "0.1.8"
   license "MIT"
 
   # Apple Silicon only — Intel Macs install via `dart pub global activate loam`.
   on_macos do
     on_arm do
-      url "https://github.com/silvio-l/loam/releases/download/v0.1.7/loam-macos-arm64.tar.gz"
-      sha256 "34713c79bab25e4cbd314b04c2cbe2e1883c9d2a0e5f4aa8be642288d66720cd"
+      url "https://github.com/silvio-l/loam/releases/download/v0.1.8/loam-macos-arm64.tar.gz"
+      sha256 "f2fd591fcd1e7c8b74db6d4fc8fa33177f9e8661f40b3a2a088e01a343578c34"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/silvio-l/loam/releases/download/v0.1.7/loam-linux-x86_64.tar.gz"
-      sha256 "c9b1f515a8d6cd97be7ebaf5d91313cc039dcee07fe7ff752d56b48ae31a7bf5"
+      url "https://github.com/silvio-l/loam/releases/download/v0.1.8/loam-linux-x86_64.tar.gz"
+      sha256 "63404532aa38beb31e62babaf153890e03bf006bed70f2c4695dac37c0eb8801"
     end
   end
 
@@ -33,7 +33,10 @@ class Loam < Formula
   end
 
   test do
-    assert_match "loam", shell_output("#{bin}/loam --help")
+    # Assert the *version*, not just the name: a stale or mis-rendered formula
+    # whose binary reports a different baked-in version than the formula claims
+    # must fail `brew test`. `loam --version` prints `loam <version>` on line 1.
+    assert_match "loam #{version}", shell_output("#{bin}/loam --version")
   end
 
   livecheck do
