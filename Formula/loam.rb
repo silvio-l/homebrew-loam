@@ -10,21 +10,21 @@
 class Loam < Formula
   desc "Codebase intelligence & anti-AI-slop for Dart & Flutter"
   homepage "https://getloam.dev"
-  version "0.1.8"
+  version "0.1.9"
   license "MIT"
 
   # Apple Silicon only — Intel Macs install via `dart pub global activate loam`.
   on_macos do
     on_arm do
-      url "https://github.com/silvio-l/loam/releases/download/v0.1.8/loam-macos-arm64.tar.gz"
-      sha256 "f2fd591fcd1e7c8b74db6d4fc8fa33177f9e8661f40b3a2a088e01a343578c34"
+      url "https://github.com/silvio-l/loam/releases/download/v0.1.9/loam-macos-arm64.tar.gz"
+      sha256 "b5c20a0aa4c3576215823bfd2720fa1adee20708aef992ee7024590e9e06e280"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/silvio-l/loam/releases/download/v0.1.8/loam-linux-x86_64.tar.gz"
-      sha256 "63404532aa38beb31e62babaf153890e03bf006bed70f2c4695dac37c0eb8801"
+      url "https://github.com/silvio-l/loam/releases/download/v0.1.9/loam-linux-x86_64.tar.gz"
+      sha256 "29eae64343e9fddcaa2aa35b1e889aafca9b1cedd0206bc722da0c30ff2b3e9d"
     end
   end
 
