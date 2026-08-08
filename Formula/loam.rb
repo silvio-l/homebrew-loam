@@ -17,14 +17,14 @@ class Loam < Formula
   on_macos do
     on_arm do
       url "https://github.com/silvio-l/loam/releases/download/v0.1.14/loam-macos-arm64.tar.gz"
-      sha256 "7bb0eb2b6ad4c35435f9b7763ffd34a4a7f28ba252288b0be720bb5a2f48f844"
+      sha256 "bf89ab439165e57ba61d570e505ab43138a64b49a310f5374158ef3fc6f38cfe"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/silvio-l/loam/releases/download/v0.1.14/loam-linux-x86_64.tar.gz"
-      sha256 "c36e8d01c64d809b6ad889139c3fb7a6a65c4931312c67cb5d65f67c23c697f8"
+      sha256 "dc6e4af397fe7d11bfcaa893bcbeec54229ea42fc3b31f0d6d905f6eb63106c7"
     end
   end
 
