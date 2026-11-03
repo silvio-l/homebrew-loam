@@ -3,28 +3,28 @@
 
 # Homebrew formula for loam.dev.
 #
-# RENDERED AUTOMATICALLY by the release workflow in silvio-l/loam
-# (.github/workflows/release.yml) and pushed into silvio-l/homebrew-loam.
+# RENDERED by tool/release-local.sh in silvio-l/loam
+# (run locally at release time) and pushed into silvio-l/homebrew-loam.
 # Do not edit the copy in the tap by hand — edit this template instead.
 # The version and per-arch checksums are filled in at release time.
 class Loam < Formula
   desc "Codebase intelligence & anti-AI-slop for Dart & Flutter"
   homepage "https://getloam.dev"
-  version "0.1.15"
+  version "0.1.16"
   license "MIT"
 
   # Apple Silicon only — Intel Macs install via `dart pub global activate loam`.
   on_macos do
     on_arm do
-      url "https://github.com/silvio-l/loam/releases/download/v0.1.15/loam-macos-arm64.tar.gz"
-      sha256 "8b190e2faad20cf839d2bb06fba08dab9aa07a0237d462fab3cb03b407b41551"
+      url "https://github.com/silvio-l/loam/releases/download/v0.1.16/loam-macos-arm64.tar.gz"
+      sha256 "db7d5d7fc1a1193bd6be71c13473cc7f78e00804d671c5e09dcc16b1369fd1ac"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/silvio-l/loam/releases/download/v0.1.15/loam-linux-x86_64.tar.gz"
-      sha256 "968e1ec4b8cfd901d60509adb49b08bd41edee9a9b5e6e68fbe9713b76ddac09"
+      url "https://github.com/silvio-l/loam/releases/download/v0.1.16/loam-linux-x86_64.tar.gz"
+      sha256 "d68c340449bb1704b6c6993c6ee6ad80c3623b042ff983d67cc0a7ea4f6f4bf0"
     end
   end
 
